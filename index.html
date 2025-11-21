@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Gameplay Programmer</title>
+    <style>
+        /* --- CSS GLOBAL & THEME --- */
+        :root {
+            --bg-color: #0f0f11;       /* Fond très sombre (style Unreal Editor) */
+            --card-bg: #1a1a1d;        /* Fond des cartes */
+            --text-main: #e0e0e0;      /* Texte principal */
+            --text-dim: #a0a0a0;       /* Texte secondaire */
+            --accent: #0075FF;         /* "Unreal Blue" pour les liens/boutons */
+            --accent-hover: #005ecb;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --font-code: "Fira Code", "Consolas", monospace; /* Pour les touches techniques */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: var(--accent); transition: 0.3s; }
+        a:hover { color: var(--accent-hover); }
+        
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- HERO SECTION --- */
+        header {
+            padding: 100px 0 60px 0;
+            text-align: left;
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            background: -webkit-linear-gradient(45deg, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-family: var(--font-code);
+            margin-bottom: 20px;
+        }
+        .bio { max-width: 600px; color: var(--text-dim); margin-bottom: 30px; font-size: 1.1rem; }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        .btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+        .btn-outline { background: transparent; border: 1px solid var(--accent); color: var(--accent) !important; }
+        .btn-outline:hover { background: rgba(0, 117, 255, 0.1); }
+
+        /* --- SKILLS --- */
+        .skills-section { margin-bottom: 60px; }
+        .tag {
+            display: inline-block;
+            background: #252529;
+            color: #ccc;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #333;
+            font-family: var(--font-code);
+        }
+        .tag.highlight { border-color: var(--accent); color: var(--accent); }
+
+        /* --- PROJECTS GRID --- */
+        .section-title { font-size: 2rem; margin-bottom: 30px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .project-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: #2a2a2e; /* Placeholder gris */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-family: var(--font-code);
+            object-fit: cover;
+        }
+        
+        .card-content { padding: 20px; }
+        .project-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 5px; }
+        .project-tech { font-size: 0.85rem; color: var(--accent); font-family: var(--font-code); margin-bottom: 10px; }
+        .project-desc { font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px; }
+        
+        .card-links a { font-size: 0.9rem; margin-right: 15px; font-weight: 600; }
+
+        /* --- FOOTER --- */
+        footer { text-align: center; padding: 50px 0; color: #555; font-size: 0.9rem; }
+        
+        /* MOBILE */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Ton Prénom Nom</h1>
+            <div class="subtitle">Gameplay Programmer | C++ & Unreal Engine 5</div>
+            
+            <p class="bio">
+                Étudiant en Game Development passionné par l'architecture code et les mathématiques 3D. 
+                Je crée des systèmes de jeu performants et scalables. Actuellement à la recherche d'un stage/alternance.
+            </p>
+            
+            <div>
+                <a href="#contact" class="btn">Me contacter</a>
+                <a href="https://github.com/TON-PSEUDO" target="_blank" class="btn btn-outline">GitHub</a>
+                <a href="#" target="_blank" class="btn btn-outline">LinkedIn</a>
+            </div>
+        </header>
+
+        <section class="skills-section">
+            <span class="tag highlight">C++ Modern (17/20)</span>
+            <span class="tag highlight">Unreal Engine 5</span>
+            <span class="tag highlight">Blueprints</span>
+            <span class="tag">Git / Perforce</span>
+            <span class="tag">3D Maths</span>
+            <span class="tag">HLSL (Basics)</span>
+            <span class="tag">AI Behavior Trees</span>
+            <span class="tag">Optimization</span>
+        </section>
+
+        <h2 class="section-title">Projets Récents</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x250/2a2a2e/555?text=Gameplay+Preview" alt="Projet 1" class="card-img">
+                <div class="card-content">
+                    <div class="project-title">Nom du Projet FPS</div>
+                    <div class="project-tech">UE5 • C++ • Multiplayer</div>
+                    <p class="project-desc">
+                        Implémentation d'un système de lag compensation et réplication des mouvements serveurs. 
+                        Architecture basée sur les Components pour la modularité des armes.
+                    </p>
+                    <div class="card-links">
+                        <a href="#">Voir sur GitHub &rarr;</a>
+                        <a href="#">Vidéo Demo &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x250/2a2a2e/555?text=AI+System" alt="Projet 2" class="card-img">
+                <div class="card-content">
+                    <div class="project-title">Stealth AI Prototype</div>
+                    <div class="project-tech">C++ • State Machine • EQS</div>
+                    <p class="project-desc">
+                        Création d'une IA de patrouille utilisant l'Environment Query System (EQS).
+                        Gestion des états (Alerte, Recherche, Attaque) sans Blueprints complexes.
+                    </p>
+                    <div class="card-links">
+                        <a href="#">Voir le Code &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x250/2a2a2e/555?text=Engine+Tool" alt="Projet 3" class="card-img">
+                <div class="card-content">
+                    <div class="project-title">Dungeon Generator</div>
+                    <div class="project-tech">C++ • ProcGen • Algorithms</div>
+                    <p class="project-desc">
+                        Algorithme de génération procédurale de donjons (Room & Corridors). 
+                        Optimisé pour générer un niveau 50x50 en moins de 100ms au Runtime.
+                    </p>
+                    <div class="card-links">
+                        <a href="#">Voir sur GitHub &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer id="contact">
+            <h2 class="section-title" style="border:none; font-size: 1.5rem;">Travaillons ensemble</h2>
+            <p style="margin-bottom: 20px;">Disponible pour des opportunités en programmation Gameplay / Engine.</p>
+            <a href="mailto:ton.email@example.com" class="btn">M'envoyer un email</a>
+            <br><br>
+            <p>&copy; 2025 Ton Prénom. Hébergé sur GitHub Pages.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
