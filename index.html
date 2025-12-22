@@ -1,86 +1,110 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio [Ton Prénom] - Game Dev C++/UE5</title>
+    <title>Portfolio | Samy MENA-BOUR</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Ton Nom</h1>
-        <p>Développeur Gameplay & Engine | C++ & Unreal Engine 5</p>
-        <div class="links">
-            <a href="https://github.com/ton-pseudo" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/ton-profil" target="_blank">LinkedIn</a>
-        </div>
-    </header>
+    <div id="canvas-container"></div>
 
-    <main>
-        <section class="showcase">
-            <h2>Projets Récents</h2>
+    <div class="lang-switch">
+        <span class="lang-btn active" onclick="switchLang('en')">EN</span>
+        <span class="divider">|</span>
+        <span class="lang-btn" onclick="switchLang('fr')">FR</span>
+    </div>
+
+    <div id="world-container">
+
+        <header>
+            <h1 class="hero-title">Gameplay Programmer</h1>
+
+            <p class="subtitle"
+               data-fr="C++ | C# | Unreal Engine 5 | Unity"
+               data-en="C++ | C# | Unreal Engine 5 | Unity">
+                C++ | C# | Unreal Engine 5 | Unity
+            </p>
+
+            <div class="scroll-down"
+                 onclick="scrollToSection(1)"
+                 data-fr="↓ Scroll pour voir les projets ↓"
+                 data-en="↓ Scroll to see projects ↓">
+                ↓ Scroll to see projects ↓
+            </div>
+        </header>
+
+        <section class="projects-section">
+            <h2 class="section-title" data-fr="Mes Projets" data-en="My Projects">My Projects</h2>
 
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
 
-                    <div class="swiper-slide">
-                        <div class="video-container">
-                            <video autoplay loop muted playsinline poster="assets/projet1-thumb.jpg">
-                                <source src="assets/projet1.mp4" type="video/mp4">
-                                Votre navigateur ne supporte pas la vidéo.
-                            </video>
-                        </div>
-                        <div class="slide-content">
-                            <h3>Nom du Projet 1</h3>
-                            <p>Système de combat C++ et Shaders HLSL.</p>
-                            <a href="https://github.com/ton-pseudo/projet1" class="btn">Voir le Code</a>
+                    <div class="swiper-slide"
+                         style="background-image: url('assets/etlc_logo.png'); "
+                         data-full-media="assets/etlc_logo.png">
+                        <div class="project-content">
+                            <span class="project-tech">C++ • SFML • Steam</span>
+                            <div class="project-title">Enter The Lost Chamber</div>
+
+                            <p data-fr="En tant que <strong>Producteur</strong> et <strong>Product Owner</strong>, j'ai piloté le développement pour assurer la <strong>sortie Steam</strong> en 6 semaines. J'ai également programmé l'architecture <strong>UI</strong> et les fonctionnalités gameplay en <strong>C++/SFML</strong>."
+                               data-en="As <strong>Producer</strong> and <strong>Product Owner</strong>, I managed the scope and roadmap to ensure a <strong>Steam release</strong> within 6 weeks. I also engineered the <strong>UI architecture</strong> and gameplay features using <strong>C++/SFML</strong>.">
+
+                                As <strong>Producer</strong> and <strong>Product Owner</strong>, I managed the scope and roadmap to ensure a <strong>Steam release</strong> within 6 weeks. I also engineered the <strong>UI architecture</strong> and gameplay features using <strong>C++/SFML</strong>.
+                            </p>
+
+                            <span class="btn pointer-events-auto" data-fr="Voir détails" data-en="See Details">See Details</span>
                         </div>
                     </div>
 
-                    <div class="swiper-slide">
-                        <div class="video-container">
-                            <video autoplay loop muted playsinline poster="assets/projet2-thumb.jpg">
-                                <source src="assets/projet2.mp4" type="video/mp4">
-                            </video>
+                    <div class="swiper-slide"
+                         style="background-image: url('https://images.unsplash.com/photo-1614726365723-4965228af9e7?q=80&w=2070&auto=format&fit=crop');"
+                         data-full-media="https://images.unsplash.com/photo-1614726365723-4965228af9e7?q=80&w=2070&auto=format&fit=crop">
+                        <div class="project-content">
+                            <span class="project-tech">C++ • UE5 • UI</span>
+                            <div class="project-title">Dread Night</div>
+
+                            <p data-fr="Moteur voxel 'From Scratch'. Génération de chunks multithreadée, Frustum Culling et optimisation de maillage (Greedy Meshing)."
+                               data-en="Custom voxel engine built from scratch. Features multithreaded chunk generation, frustum culling, and greedy meshing optimization.">
+                                Custom voxel engine built from scratch. Features multithreaded chunk generation, frustum culling, and greedy meshing optimization.
+                            </p>
+
+                            <span class="btn pointer-events-auto" data-fr="Voir détails" data-en="See Details">See Details</span>
                         </div>
-                        <div class="slide-content">
-                            <h3>Nom du Projet 2</h3>
-                            <p>Génération procédurale de donjon.</p>
-                            <a href="https://github.com/ton-pseudo/projet2" class="btn">Voir le Code</a>
+                    </div>
+
+                    <div class="swiper-slide"
+                         style="background-image: url('https://images.unsplash.com/photo-1633511090164-b43840ea1607?q=80&w=2070&auto=format&fit=crop');"
+                         data-full-media="https://images.unsplash.com/photo-1633511090164-b43840ea1607?q=80&w=2070&auto=format&fit=crop">
+                        <div class="project-content">
+                            <span class="project-tech">UE5 • GAS • AI</span>
+                            <div class="project-title">Dungeon Crawler</div>
+
+                            <p data-fr="RPG utilisant le Gameplay Ability System (GAS). IA avancée via Behavior Trees et génération procédurale de donjons."
+                               data-en="RPG prototype utilizing Gameplay Ability System (GAS). Advanced AI with Behavior Trees and asynchronous procedural generation.">
+                                RPG prototype utilizing Gameplay Ability System (GAS). Advanced AI with Behavior Trees and asynchronous procedural generation.
+                            </p>
+
+                            <span class="btn pointer-events-auto" data-fr="Voir détails" data-en="See Details">See Details</span>
                         </div>
                     </div>
 
                 </div>
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-    </main>
 
+    </div> <div id="fullscreen-overlay">
+        <div class="overlay-close" data-fr="Fermer [X]" data-en="Close [X]">Close [X]</div>
+        <img id="fullscreen-image" src="" alt="Project Fullscreen">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            centeredSlides: true,
-            autoplay: {
-                delay: 5000, // Change de slide toutes les 5 sec
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            loop: true
-        });</script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
