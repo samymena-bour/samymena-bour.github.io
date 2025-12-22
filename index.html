@@ -3,232 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Gameplay Programmer</title>
-    <style>
-        /* --- CSS GLOBAL & THEME --- */
-        :root {
-            --bg-color: #0f0f11;       /* Fond très sombre (style Unreal Editor) */
-            --card-bg: #1a1a1d;        /* Fond des cartes */
-            --text-main: #e0e0e0;      /* Texte principal */
-            --text-dim: #a0a0a0;       /* Texte secondaire */
-            --accent: #0075FF;         /* "Unreal Blue" pour les liens/boutons */
-            --accent-hover: #005ecb;
-            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            --font-code: "Fira Code", "Consolas", monospace; /* Pour les touches techniques */
-        }
+    <title>Portfolio [Ton Prénom] - Game Dev C++/UE5</title>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: var(--font-main);
-            line-height: 1.6;
-        }
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-        a { text-decoration: none; color: var(--accent); transition: 0.3s; }
-        a:hover { color: var(--accent-hover); }
-        
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-
-        /* --- HERO SECTION --- */
-        header {
-            padding: 100px 0 60px 0;
-            text-align: left;
-        }
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
-            background: -webkit-linear-gradient(45deg, #fff, #888);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .subtitle {
-            font-size: 1.5rem;
-            color: var(--accent);
-            font-family: var(--font-code);
-            margin-bottom: 20px;
-        }
-        .bio { max-width: 600px; color: var(--text-dim); margin-bottom: 30px; font-size: 1.1rem; }
-        
-        .btn {
-            display: inline-block;
-            background: var(--accent);
-            color: white !important;
-            padding: 10px 25px;
-            border-radius: 5px;
-            font-weight: 600;
-            margin-right: 10px;
-        }
-        .btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
-        .btn-outline { background: transparent; border: 1px solid var(--accent); color: var(--accent) !important; }
-        .btn-outline:hover { background: rgba(0, 117, 255, 0.1); }
-
-        /* --- SKILLS --- */
-        .skills-section { margin-bottom: 60px; }
-        .tag {
-            display: inline-block;
-            background: #252529;
-            color: #ccc;
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            margin-right: 8px;
-            margin-bottom: 8px;
-            border: 1px solid #333;
-            font-family: var(--font-code);
-        }
-        .tag.highlight { border-color: var(--accent); color: var(--accent); }
-
-        /* --- PROJECTS GRID --- */
-        .section-title { font-size: 2rem; margin-bottom: 30px; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
-        }
-        
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid #333;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.2s;
-        }
-        .project-card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        
-        .card-img {
-            width: 100%;
-            height: 200px;
-            background-color: #2a2a2e; /* Placeholder gris */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #555;
-            font-family: var(--font-code);
-            object-fit: cover;
-        }
-        
-        .card-content { padding: 20px; }
-        .project-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 5px; }
-        .project-tech { font-size: 0.85rem; color: var(--accent); font-family: var(--font-code); margin-bottom: 10px; }
-        .project-desc { font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px; }
-        
-        .card-links a { font-size: 0.9rem; margin-right: 15px; font-weight: 600; }
-
-        /* --- FOOTER --- */
-        footer { text-align: center; padding: 50px 0; color: #555; font-size: 0.9rem; }
-        
-        /* MOBILE */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .projects-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <div class="container">
-        
-        <header>
-            <h1>Samy MENA-BOUR</h1>
-            <div class="subtitle">Programmer | C++ | C#</div>
-            
-            <p class="bio">
-                Final-year Game Development student specializing in software architecture, gameplay, and UI.
-                I create fluid, optimized, and scalable systems built to grow with the project.
-                Open to a full-time position within a creative and dedicated team.
-            </p>
-            
-            <div>
-                <a href="#contact" class="btn">Contact</a>
-                <a href="https://github.com/SamyMENA-BOUR" target="_blank" class="btn btn-outline">GitHub</a>
-                <a href="#" target="_blank" class="btn btn-outline">LinkedIn</a>
-            </div>
-        </header>
-
-        <section class="skills-section">
-            <span class="tag highlight">C++ Modern (17/20)</span>
-            <span class="tag highlight">Unreal Engine 5</span>
-            <span class="tag highlight">UMG</span>
-            <span class="tag highlight">Blueprints</span>
-            <span class="tag highlight">C# 9.0</span>
-            <span class="tag highlight">Unity</span>
-            <span class="tag highlight">DOTS</span>
-            <span class="tag highlight">Git</span>
-        </section>
-
-        <h2 class="section-title">Recent Projects</h2>
-        <div class="projects-grid">
-
-            <div class="project-card">
-                <img src="https://via.placeholder.com/400x250/2a2a2e/555?text=Gameplay+Preview" alt="Projet 1" class="card-img">
-                <div class="card-content">
-                    <div class="project-title">Placeholder | Solo</div>
-                    <div class="project-tech">UE5 • C++ • SinglePlayer</div>
-                    <p class="project-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <div class="card-links">
-                        <a href="#">View on GitHub &rarr;</a>
-                        <a href="#">Demo Video &rarr;</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="https://via.placeholder.com/400x250/2a2a2e/555?text=AI+System" alt="Projet 2" class="card-img">
-                <div class="card-content">
-                    <div class="project-title">UI | Solo</div>
-                    <div class="project-tech">UE5 • C++ • UMG</div>
-                    <p class="project-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <div class="card-links">
-                        <a href="#">View on GitHub &rarr;</a>
-                        <a href="#">Demo Video &rarr;</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="https://via.placeholder.com/400x250/2a2a2e/555?text=Engine+Tool" alt="Projet 3" class="card-img">
-                <div class="card-content">
-                    <div class="project-title">Enter The Lost Chamber | Team</div>
-                    <div class="project-tech">SFML • C++ • Steam</div>
-                    <p class="project-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <div class="card-links">
-                        <a href="#">View on Steam &rarr;</a>
-                    </div>
-                </div>
-            </div>
-
+    <header>
+        <h1>Ton Nom</h1>
+        <p>Développeur Gameplay & Engine | C++ & Unreal Engine 5</p>
+        <div class="links">
+            <a href="https://github.com/ton-pseudo" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/ton-profil" target="_blank">LinkedIn</a>
         </div>
+    </header>
 
-        <footer id="contact">
-            <h2 class="section-title" style="border:none; font-size: 1.5rem;">Let's Work Together</h2>
-            <p style="margin-bottom: 20px;">Available for programming / Engine programming opportunities.</p>
-            <a href="mailto:ton.email@example.com" class="btn">Send Me an Email</a>
-            <br><br>
-            <p>&copy; 2025 Samy MENA-BOUR. Hosted on GitHub Pages.</p>
-        </footer>
+    <main>
+        <section class="showcase">
+            <h2>Projets Récents</h2>
 
-    </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
 
+                    <div class="swiper-slide">
+                        <div class="video-container">
+                            <video autoplay loop muted playsinline poster="assets/projet1-thumb.jpg">
+                                <source src="assets/projet1.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la vidéo.
+                            </video>
+                        </div>
+                        <div class="slide-content">
+                            <h3>Nom du Projet 1</h3>
+                            <p>Système de combat C++ et Shaders HLSL.</p>
+                            <a href="https://github.com/ton-pseudo/projet1" class="btn">Voir le Code</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="video-container">
+                            <video autoplay loop muted playsinline poster="assets/projet2-thumb.jpg">
+                                <source src="assets/projet2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="slide-content">
+                            <h3>Nom du Projet 2</h3>
+                            <p>Génération procédurale de donjon.</p>
+                            <a href="https://github.com/ton-pseudo/projet2" class="btn">Voir le Code</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000, // Change de slide toutes les 5 sec
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true
+        });</script>
 </body>
 </html>
