@@ -10,13 +10,13 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Désactive le scroll natif */
+    overflow: hidden; /* DÃ©sactive le scroll natif */
     background-color: #0a0a0a;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* --- CONTAINER GLOBAL (CAMÉRA) --- */
+/* --- CONTAINER GLOBAL (CAMÃ‰RA) --- */
 #world-container {
     width: 100%;
     height: 100%;
@@ -31,7 +31,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* On le met à 0 (et pas -1) pour qu'il soit visible sur le body */
+    z-index: 0; /* On le met Ã  0 (et pas -1) pour qu'il soit visible sur le body */
     opacity: 0.6;
     pointer-events: none; /* Laisse la souris passer au travers pour cliquer sur les liens */
 }
@@ -151,7 +151,7 @@ h1.hero-title {
     font-size: 0.9rem;
 }
 
-/* Classe utilitaire pour rendre les boutons cliquables malgré le pointer-events: none du parent */
+/* Classe utilitaire pour rendre les boutons cliquables malgrÃ© le pointer-events: none du parent */
 .pointer-events-auto {
     pointer-events: auto;
 }
@@ -229,14 +229,14 @@ h1.hero-title {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.96); /* Fond très sombre */
+    background: rgba(0,0,0,0.96); /* Fond trÃ¨s sombre */
     z-index: 9999; /* Au-dessus de TOUT */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    pointer-events: none; /* Caché par défaut */
+    pointer-events: none; /* CachÃ© par dÃ©faut */
     transition: opacity 0.4s ease;
 }
 
@@ -271,3 +271,36 @@ h1.hero-title {
     .overlay-close:hover {
         color: #00ff88;
     }
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    opacity: 0; /* Pour l'animer avec GSAP */
+    transform: translateY(20px);
+}
+
+.social-btn {
+    color: #fff;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+.social-btn:hover {
+    color: #00ff88;
+    border-bottom: 1px solid #00ff88;
+}
+
+.resume-btn {
+    border: 1px solid #00ff88;
+    border-radius: 4px;
+    padding: 8px 15px;
+}
+
+.resume-btn:hover {
+    background: rgba(0, 255, 136, 0.1);
+}
