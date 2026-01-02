@@ -304,3 +304,47 @@ h1.hero-title {
 .resume-btn:hover {
     background: rgba(0, 255, 136, 0.1);
 }
+
+.fixed-nav-left {
+    position: fixed;
+    left: 40px;
+    top: 30px; /* Aligné avec le sélecteur de langue à droite */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ff88;
+    padding: 8px 15px;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+}
+
+.nav-icon-link img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1); /* Rend les icônes blanches pour mieux ressortir */
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.nav-icon-link:hover img {
+    transform: scale(1.2);
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(90deg); /* Teinte vers le vert néon */
+}
+
+.nav-cv-btn {
+    color: #00ff88;
+    text-decoration: none;
+    font-family: monospace;
+    font-weight: bold;
+    border: 1px solid #00ff88;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+}
+
+.nav-cv-btn:hover {
+    background: #00ff88;
+    color: #000;
+}
