@@ -1,7 +1,7 @@
 /* 1. CONFIGURATION PARTICULES */
 particlesJS("canvas-container", {
     "particles": {
-        // ... (tes réglages de nombre/couleur ne changent pas)
+        // ... (tes rÃ©glages de nombre/couleur ne changent pas)
         "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
         "color": { "value": "#00ff88" },
         "shape": { "type": "circle" },
@@ -11,7 +11,7 @@ particlesJS("canvas-container", {
         "move": { "enable": true, "speed": 1, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
     },
     "interactivity": {
-        "detect_on": "window",  /* <--- C'EST ICI LE CHANGEMENT (avant c'était "canvas") */
+        "detect_on": "window",  /* <--- C'EST ICI LE CHANGEMENT (avant c'Ã©tait "canvas") */
         "events": {
             "onhover": { "enable": true, "mode": "repulse" },
             "onclick": { "enable": true, "mode": "push" }
@@ -25,10 +25,11 @@ particlesJS("canvas-container", {
 const tl = gsap.timeline();
 tl.to(".hero-title", { opacity: 1, y: 0, duration: 1, ease: "power4.out" })
     .to(".subtitle", { opacity: 1, y: 0, duration: 1, ease: "power4.out" }, "-=0.5")
+    .to(".social-links", { opacity: 1, y: 0, duration: 0.8 }, "-=0.3") // Ajout ici
     .to(".scroll-down", { opacity: 1, duration: 1 })
     .to(".scroll-down", { y: 10, duration: 1.5, repeat: -1, yoyo: true, ease: "power1.inOut" });
 
-/* 3. SWIPER (CAROUSEL) - MODIFIÉ */
+/* 3. SWIPER (CAROUSEL) - MODIFIÃ‰ */
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
@@ -36,24 +37,24 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     loop: true,
 
-    // Configuration Autoplay Avancée
+    // Configuration Autoplay AvancÃ©e
     autoplay: {
         delay: 5000,
-        disableOnInteraction: false, // Ne pas désactiver définitivement après interaction
+        disableOnInteraction: false, // Ne pas dÃ©sactiver dÃ©finitivement aprÃ¨s interaction
         pauseOnMouseEnter: true,     // PAUSE si la souris est dessus (Focus)
     },
 
-    // Événements pour reset le timer
+    // Ã‰vÃ©nements pour reset le timer
     on: {
-        // Dès qu'on commence à toucher/cliquer
+        // DÃ¨s qu'on commence Ã  toucher/cliquer
         touchStart: function () {
-            this.autoplay.stop(); // On stop net pour éviter un saut
+            this.autoplay.stop(); // On stop net pour Ã©viter un saut
         },
-        // Dès qu'on relâche ou finit le drag
+        // DÃ¨s qu'on relÃ¢che ou finit le drag
         touchEnd: function () {
-            this.autoplay.start(); // On relance le timer à 0
+            this.autoplay.start(); // On relance le timer Ã  0
         },
-        // Dès que la slide change (clic pagination ou drag)
+        // DÃ¨s que la slide change (clic pagination ou drag)
         slideChange: function () {
             this.autoplay.start(); // On s'assure que le timer repart de 5s
         }
@@ -87,7 +88,7 @@ function switchLang(lang) {
             opacity: 0, duration: 0.2, onComplete: () => {
 
                 // --- C'EST ICI QU'ON CHANGE ---
-                // On utilise innerHTML pour interpréter les balises <strong>
+                // On utilise innerHTML pour interprÃ©ter les balises <strong>
                 el.innerHTML = el.getAttribute(`data-${lang}`);
                 // ------------------------------
 
@@ -132,7 +133,7 @@ function openFullscreen(mediaUrl) {
 
 function closeFullscreen() {
     overlay.classList.remove('active');
-    // On relance le timer après la fermeture
+    // On relance le timer aprÃ¨s la fermeture
     setTimeout(() => { swiper.autoplay.start(); }, 500);
 }
 
