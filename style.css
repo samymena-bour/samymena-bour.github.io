@@ -313,7 +313,7 @@ h1.hero-title {
     display: flex;
     align-items: center;
     gap: 15px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.4);
     border: 1px solid #00ff88;
     padding: 8px 15px;
     border-radius: 30px;
