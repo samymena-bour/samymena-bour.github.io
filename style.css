@@ -327,7 +327,8 @@ h1.hero-title {
 }
 
 .nav-icon-link:hover img {
-    transform: scale(1.33);
+    transform: scale(1.2);
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(90deg);
 }
 
 .nav-cv-btn {
