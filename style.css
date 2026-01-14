@@ -323,14 +323,14 @@ h1.hero-title {
 .nav-icon-link img {
     width: 20px;
     height: 20px
-    padding: 0px 3px 0px 0px;
+    padding: 30px 0px 0px 0px;
     transition: transform 0.3s, filter 0.3s;
 }
 
 .nav-icon-link-git img {
     width: 20px;
     height: 20px;
-    padding: 0px 3px 0px 0px;
+    padding: 30px 0px 0px 0px;
     filter: invert(1); /* Rend les icônes blanches pour mieux ressortir */
     transition: transform 0.3s, filter 0.3s;
 }
